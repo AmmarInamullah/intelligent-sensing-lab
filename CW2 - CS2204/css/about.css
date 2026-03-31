@@ -1,0 +1,177 @@
+@import url('common.css');
+
+/* ===== ABOUT PAGE CUSTOM STYLING ===== */
+
+/* --- Header block --- */
+.about-header {
+  background-color: #cde8ff;
+  text-align: center;
+  padding: 40px 0 20px;
+  border-bottom: 1px solid #a0c8ff;
+}
+
+.header-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.about-logo {
+  width: 140px;
+  height: auto;
+  filter: drop-shadow(0 0 8px rgba(0,0,0,0.2));
+}
+
+.header-text h1 {
+  font-size: 2rem;
+  color: #2756a3;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.header-text .slogan-cn {
+  font-size: 1rem;
+  color: #333;
+}
+
+.header-text .slogan-en {
+  font-size: 1rem;
+  color: #333;
+  font-style: italic;
+  margin-top: 3px;
+}
+
+.vision {
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-top: 10px;
+  color: #1a1a1a;
+}
+
+/* --- Image section --- */
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; 
+}
+
+.welcome {
+  all: unset; 
+  display: block;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  overflow: hidden;
+}
+
+.about-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* --- Two-column section --- */
+.about-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 80%;
+  margin: 40px auto;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.about-text {
+  flex: 1;
+  border: 2px solid #3a7bd5;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  min-width: 350px;
+}
+
+.about-text h2 {
+  text-align: center;
+  color: #3a7bd5;
+  margin-bottom: 20px;
+}
+
+.about-text p, .about-text ul {
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+
+.about-table {
+  flex: 1;
+  min-width: 350px;
+}
+
+/* --- Table styling --- */
+table {
+  width: 80%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  text-align: center;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+caption {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+thead {
+  background-color: #3a7bd5;
+  color: #fff;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #f7fbff;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #e6f2ff;
+}
+
+tbody tr:hover {
+  background-color: #cce5ff;
+  transition: background 0.3s ease;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 12px;
+}
+
+/* --- Responsive adjustments --- */
+@media (max-width: 768px) {
+  .header-top {
+    flex-direction: column;
+  }
+
+  .about-logo {
+    width: 100px;
+  }
+
+  .about-container {
+    flex-direction: column;
+  }
+
+  .about-text, .about-table {
+    max-width: 100%;
+  }
+}

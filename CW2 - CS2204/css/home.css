@@ -1,0 +1,50 @@
+@import url('common.css');
+
+/* ===== HOME PAGE ===== */
+
+.welcome ul {
+  margin-left: 20px;
+}
+
+.info dl dt {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.info dl dd {
+  margin-left: 15px;
+}
+
+/* Two-column layout */
+.info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.info img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Apply button hover */
+.info a img {
+  display: block;
+  margin: 15px auto;
+  transition: transform 0.3s ease;
+}
+
+.info a img:hover {
+  transform: scale(1.05);
+}
+
+/* Background colors */
+.welcome {
+  background-color: #e9f7fe;
+}
+
+.info {
+  background-color: #f0f9f0;
+}
