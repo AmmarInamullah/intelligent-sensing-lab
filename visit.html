@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Visit</title>
+  <meta charset="UTF-8">
+  <meta name="author" content="Dat NGUYEN">
+  <meta name="description" content="Intelligent Sensing Lab Homepage">
+  <meta name="keywords" content="Web development, HTML, coursework1">
+
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/visit.css">
+
+  <!-- thư viện có hàm reserve(...) -->
+  <script src="https://personal.cs.cityu.edu.hk/~cs2204/2023/cw3cs2204.js"></script>
+</head>
+
+<body>
+  <header>
+    <img src="../image/logo.png" alt="ISLab logo" width="550" height="150">
+    <h1>Intelligent Sensing Lab</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="apply.html">Apply</a></li>
+      <li><a href="visit.html">Visit</a></li>
+      <li><a href="information.html">Information</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="info-box">
+    <p>Visit Intelligent Sensing Lab to witness groundbreaking research in sensor technology. Our facility features:</p>
+    <ul>
+      <li>Cleanroom for nanoscale sensor fabrication</li>
+      <li>Environmental testing chambers</li>
+      <li>Sensor calibration and validation center</li>
+      <li>Prototyping workshop</li>
+    </ul>
+    <br>
+    <p>During your tour, you'll:</p>
+    <ul>
+      <li>See live demonstrations of our latest sensors</li>
+      <li>Meet leading researchers in optical, bio, and smart sensing</li>
+      <li>Learn about career and collaboration opportunities</li>
+    </ul>
+  </div>
+
+  <div class="location-block">
+    <img src="../image/location.png" alt="Map of Intelligent Sensing Lab">
+    <div class="location-info">
+      <h3>Location</h3>
+      <p><b>Address:</b> Tat Chee Avenue, Kowloon, Hong Kong SAR</p>
+      <p><b>Tel:</b> (852) 9876 5432</p>
+      <p><b>Email: </b>visit@intelligentsensinglab.edu.hk</p>
+    </div>
+  </div>
+
+  <div>
+    <h3 class="form-title">Annual Open Day Registration</h3>
+    <!-- nơi hiển thị error message -->
+    <p id="visit-message"></p>
+
+    <form action="#" method="get">
+      <fieldset>
+        <legend>Booking Information</legend>
+
+        <label>
+          Date:
+          <input type="date" name="date">
+        </label>
+
+        <label for="time">
+          Time:
+          <select name="time" id="time">
+            <option value="9:00-10:00am">9:00-10:00am</option>
+            <option value="10:00-11:00am">10:00-11:00am</option>
+            <option value="2:00-3:00pm">2:00-3:00pm</option>
+            <option value="3:00-4:00pm">3:00-4:00pm</option>
+            <option value="4:00-5:00pm">4:00-5:00pm</option>
+          </select>
+        </label>
+
+        <label for="Visitors_number">
+          No.of Visitors:
+          <input type="number" name="Visitors_number" id="Visitors_number" >
+        </label>
+
+        <br><br>
+        <input type="submit" value="Check Availability">
+        <input type="reset" value="Reset">
+      </fieldset>
+    </form>
+  </div>
+
+  <footer>
+    <img src="../image/footer_logo.png" alt="Footer Logo" width="460" height="100">
+    <p>&copy; CityU 2025 - sources of images and text from Wikipedia and Courtesy of Icon pack by Icons8 - designed by
+      <a href="design.html">Ammar Inamullah</a>
+    </p>
+  </footer>
+
+  <!-- đường dẫn thư mục js chuẩn -->
+  <script src="../javascript/visit.js"></script>
+</body>
+</html>

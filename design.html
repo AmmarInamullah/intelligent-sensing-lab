@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Design Page</title>
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/design.css">
+</head>
+<body>
+<header>
+  <img src="../image/logo.png" width="550" height="150" alt="ISLab logo">
+  <h1>Intelligent Sensing Lab</h1>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="home.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="apply.html">Apply</a></li>
+    <li><a href="visit.html">Visit</a></li>
+    <li><a href="information.html">Information</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="design.html" class="active">Design</a></li>
+  </ul>
+</nav>
+
+<main class="design-content">
+  <h2>Design Summary</h2>
+
+  <h3>1. Files &amp; Structure</h3>
+  <ul>
+    <li><code>../js/apply.js</code> – 244 lines</li>
+    <li><code>../js/visit.js</code> – 56 lines</li>
+    <li><code>../js/information.js</code> – 54 lines</li>
+  </ul>
+  <p>HTML, CSS, and JavaScript are separated into <code>.html</code>, <code>../css/</code>, and <code>../js/</code> folders.</p>
+
+  <h3>2. Event Handling (2 Techniques)</h3>
+  <ul>
+    <li><b>addEventListener (JavaScript)</b>
+      <ul>
+        <li><code>apply.js</code> line 22 – <code>DOMContentLoaded</code> init.</li>
+        <li><code>apply.js</code> line 60 – click on division headers.</li>
+        <li><code>apply.js</code> line 169 – click on rank buttons.</li>
+        <li><code>apply.js</code> line 183 – submit link.</li>
+        <li><code>apply.js</code> line 233 – clear link.</li>
+        <li><code>visit.js</code> lines 3, 14, 53 – <code>DOMContentLoaded</code>, submit, reset.</li>
+        <li><code>information.js</code> line 20 – <code>DOMContentLoaded</code> for text &amp; video.</li>
+      </ul>
+    </li>
+    <li><b>Inline HTML handler</b><br>
+      <code>apply.html</code> uses <code>onclick="handleClearClick()"</code> to call
+      <code>window.handleClearClick</code> defined in <code>apply.js</code> line 175.
+    </li>
+  </ul>
+
+  <h3>3. ES6 Features for Bonus</h3>
+  <ul>
+    <li><b>class</b>  
+      <br><code>apply.js</code> line 4 – <code>class ChosenGroup</code> models one chosen internship (division, group, rank) as an object instead of loose variables.</li>
+
+    <li><b>map</b>  
+      <br><code>apply.js</code> line 13 – <code>const divisionNameMap = new Map([...])</code> maps form CSS class (e.g. <code>forms-opt</code>) to division names, used at line 127 to get the correct division.</li>
+
+    <li><b>set</b>  
+      <br><code>apply.js</code> line 187 – <code>const chosenRanks = new Set()</code> stores unique ranks when submitting, then checks for duplicate ranks and missing ranks (gaps) before accepting the application.</li>
+
+    <li><b>let &amp; const</b>  
+      <br>Used throughout to get block scope and prevent accidental reassignment:
+      <ul>
+        <li><code>apply.js</code> lines 13, 25, 103 – configuration and DOM references.</li>
+        <li><code>visit.js</code> lines 4–8, 29 – form elements and validated number.</li>
+        <li><code>information.js</code> line 2 – <code>promoMessages</code>, line 9 – <code>videoSources</code>, lines 27 &amp; 36 – <code>let msgIndex</code>, <code>let vidIndex</code> for rotation logic.</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h3>4. Page Logic (Short)</h3>
+  <ul>
+    <li><b>Apply:</b> choose groups with ranks, prevent duplicates, detect gaps using <code>Set</code>, and show summary table.</li>
+    <li><b>Visit:</b> validate date, time, and integer visitors, then call <code>reserve()</code> or show error.</li>
+    <li><b>Information:</b> rotate promo text every 3 seconds and automatically switch between two videos.</li>
+  </ul>
+
+  <!-- ===== NEW PART: CW2 CSS TECHNIQUES ===== -->
+
+  <h3>5. CW2 Layout &amp; Multi-column Design (CSS)</h3>
+  <ul>
+    <li><b>Common header / navigation / footer</b> – shared styles are defined in
+      <code>../css/common.css</code> (214 lines). The gradient header and footer plus centered logo
+      are in lines 16–44 and 103–132; the horizontal sticky navigation bar is in lines 48–74.</li>
+    <li><b>Home page two-column layout</b> – the “Information” and “Map and Apply” blocks use a
+      two-column flex layout in <code>.info</code> (<code>home.css</code> lines 17–33) together with the
+      shared <code>.multi-col</code> rule (<code>common.css</code> lines 168–181).</li>
+    <li><b>About page welcome + text/table</b> – the text container in the welcome block is limited to
+      80% of the page width and split into text + table via flexbox
+      (<code>.about-container</code> in <code>about.css</code> lines 52–82). The hero image
+      <code>.about-image</code> is responsive and never exceeds its container
+      (<code>about.css</code> lines 74–81).</li>
+    <li><b>Visit page map + location</b> – the map image and location text are arranged as a
+      two-column block using <code>.location-block</code> (<code>visit.css</code> lines 52–70), while the
+      visitor booking form is styled and aligned with the labels and inputs in lines 30–47.</li>
+    <li><b>Information page promo text + video</b> – the promotional message and the video are placed
+      side-by-side using a flex layout in <code>.promo</code>
+      (<code>information.css</code> lines 6–24).</li>
+    <li><b>Consistent table styling &amp; hover</b> – all major tables share the same look:
+      header row with background color and centered text via <code>th, td</code> and
+      <code>thead</code> rules in <code>about.css</code> lines 93–118,
+      <code>information.css</code> lines 26–38, <code>apply.css</code> lines 108–139, and
+      <code>contact.css</code> lines 5–17. Table row hover effects are defined in
+      <code>about.css</code> line 113, <code>information.css</code> lines 72–78, and
+      <code>apply.css</code> lines 158–172.</li>
+  </ul>
+
+  <h3>6. Free Design Requirement 1 – Positioning Schemes</h3>
+  <ul>
+    <li><b>Sticky navigation bar</b> – the main navigation uses
+      <code>position: sticky</code> and <code>top: 0</code> in <code>common.css</code> lines 48–54 so that the
+      menu stays at the top when scrolling.</li>
+    <li><b>Relative container &amp; absolute overlay</b> – the About page full-width welcome image
+      uses <code>position: relative</code> on <code>.welcome</code> (<code>about.css</code> line 65) to center the
+      image across the viewport. The footer shine effect is implemented by
+      <code>footer::before</code> with <code>position: absolute</code> in <code>common.css</code> lines 135–142.</li>
+  </ul>
+
+  <h3>7. Free Design Requirement 2 – CSS3 Techniques</h3>
+  <ul>
+    <li><b>Rounded corners &amp; shadows (basic CSS3)</b> – content blocks use
+      <code>border-radius</code> and <code>box-shadow</code>, for example
+      <code>div, section</code> in <code>common.css</code> lines 149–156,
+      <code>.about-text</code> in <code>about.css</code> lines 68–75, and the chosen-group result table in
+      <code>apply.css</code> lines 121–129.</li>
+    <li><b>Gradients &amp; transforms</b> – the header and footer use animated linear-gradient
+      backgrounds in <code>common.css</code> lines 16–31 and 103–118. Navigation links apply
+      <code>transform: translateY(-2px)</code> on hover (<code>common.css</code> lines 72–78) to give a
+      lifting effect.</li>
+    <li><b>Transitions</b> – smooth hover transitions are applied to navigation links
+      (<code>common.css</code> line 66), division headings and forms on the Apply page
+      (<code>apply.css</code> lines 42–44 and 95–101), and table rows in the result block
+      (<code>apply.css</code> lines 158–172).</li>
+    <li><b>Animations</b> – the header and footer gradients use keyframe animations
+      <code>headerGradient</code> and <code>footerGradient</code> in <code>common.css</code> lines 23–31 and
+      109–117. The CW2 design page itself applies a simple fade-in animation to the whole
+      <code>body</code> using <code>@keyframes fadeIn</code> and <code>animation</code> in
+      <code>design.css</code> lines 17–24.</li>
+  </ul>
+
+  <h3>8. Free Design Requirement 3 – Stylesheet Organisation</h3>
+  <ul>
+    <li><b>Shared stylesheet</b> – <code>../css/common.css</code> (214 lines) holds all global styles:
+      header, navigation bar, footer, base typography, and common multi-column layout rules.</li>
+    <li><b>Page-specific stylesheets</b> – each CW2 page has its own CSS file imported or linked:
+      <code>home.css</code> (50 lines), <code>about.css</code> (177 lines),
+      <code>apply.css</code> (213 lines), <code>visit.css</code> (88 lines),
+      <code>information.css</code> (83 lines), <code>contact.css</code> (37 lines), and
+      <code>design.css</code> (24 lines). This keeps layout and visual styles modular and easier to
+      maintain.</li>
+    <li><b>Print stylesheet</b> – <code>printApply.css</code> (132 lines) is linked with
+      <code>media="print"</code> to format only the header, footer, and result table when the Apply
+      page is printed, hiding all unnecessary on-screen elements.</li>
+  </ul>
+</main>
+
+<footer>
+  <img src="../image/footer_logo.png" width="460" height="100" alt="Footer logo">
+  <p>&copy; CityU 2025 - designed by <a href="design.html">Ammar Inamullah</a></p>
+</footer>
+</body>
+</html>

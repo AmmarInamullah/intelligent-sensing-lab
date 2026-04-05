@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Apply</title>
+  <meta charset="UTF-8">
+  <meta name="author" content="Dat NGUYEN">
+  <meta name="description" content="Intelligent Sensing Lab Homepage">
+  <meta name="keywords" content="Web development, HTML, coursework1">
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/apply.css" media="screen">
+  <link rel="stylesheet" href="../css/printApply.css" media="print">
+</head>
+
+<body>
+  <header>
+    <img src="../image/logo.png" alt="ISLab logo" width="550" height="150">
+    <h1>Intelligent Sensing Lab</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="apply.html">Apply</a></li>
+      <li><a href="visit.html">Visit</a></li>
+      <li><a href="information.html">Information</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="welcome"><h2>Welcome to ISLab</h2></div>
+
+  <!-- ===== APPLY SECTION ===== -->
+  <section class="apply-container">
+    <h4 class="apply-title">Join our cutting-edge research teams in these focus areas:</h4>
+    <div class="apply-block">
+      <!-- Row 1: Headings -->
+      <div class="division optical"><h4>Optical Sensing Division</h4></div>
+      <div class="division bio"><h4>Bio-Sensing Division</h4></div>
+      <div class="division smart"><h4>Smart Sensing Division</h4></div>
+      <!-- Row 2: Forms -->
+      <div class="forms forms-opt">
+        <form>
+          <img src="../image/hyperspectral.png" alt="Hyperspectral Imaging Group">
+          <label for="opt1">Hyperspectral Imaging Group</label>
+          <input id="opt1" type="text">
+          <input type="submit" value="rank of choice">
+        </form>
+        <form>
+          <img src="../image/lidar.png" alt="LiDAR Development Team">
+          <label for="opt2">LiDAR Development Team</label>
+          <input id="opt2" type="text">
+          <input type="submit" value="rank of choice">
+        </form>
+        <form>
+          <img src="../image/nanophotonics.png" alt="Nanophotonics Research">
+          <label for="opt3">Nanophotonics Research</label>
+          <input id="opt3" type="text">
+          <input type="submit" value="rank of choice">
+        </form>
+      </div>
+
+      <div class="forms forms-bio">
+        <form>
+          <img src="../image/medical.png" alt="Medical Diagnostics Group">
+          <label for="bio1">Medical Diagnostics Group</label>
+          <input id="bio1" type="text">
+          <input type="submit" value="rank of choice">
+        </form>
+        <form>
+          <img src="../image/environmental.png" alt="Environmental Sensors Team">
+          <label for="bio2">Environmental Sensors Team</label>
+          <input id="bio2" type="text">
+          <input type="submit" value="rank of choice">
+        </form>
+        <form>
+          <img src="../image/wearable.png" alt="Wearable Technology Lab">
+          <label for="bio3">Wearable Technology Lab</label>
+          <input id="bio3" type="text">
+          <input type="submit" value="rank of choice">
+        </form>
+      </div>
+
+      <div class="forms forms-smart">
+        <form>
+          <img src="../image/iot.png" alt="IoT Sensor Networks">
+          <label for="sm1">IoT Sensor Networks</label>
+          <input id="sm1" type="text">
+          <input type="submit" value="rank of choice">
+        </form>
+        <form>
+          <img src="../image/ai.png" alt="AI-Enabled Sensing">
+          <label for="sm2">AI-Enabled Sensing</label>
+          <input id="sm2" type="text">
+          <input type="submit" value="rank of choice">
+        </form>
+        <div class="forms-placeholder"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== RESULT TABLE ===== -->
+  <div class="result-block">
+    <h2>Your chosen research groups:</h2>
+    <h3>Current Internship Placements:</h3>
+    <table id="chosen-table">
+      <thead>
+        <tr><th>Division</th><th>Research Group</th><th>Rank</th></tr>
+      </thead>
+      <tbody>
+        <tr data-rank="1"><td></td><td></td><td>1</td></tr>
+        <tr data-rank="2"><td></td><td></td><td>2</td></tr>
+        <tr data-rank="3"><td></td><td></td><td>3</td></tr>
+        <tr data-rank="4"><td></td><td></td><td>4</td></tr>
+        <tr data-rank="5"><td></td><td></td><td>5</td></tr>
+        <tr data-rank="6"><td></td><td></td><td>6</td></tr>
+        <tr data-rank="7"><td></td><td></td><td>7</td></tr>
+        <tr data-rank="8"><td></td><td></td><td>8</td></tr>
+        <tr data-rank="9"><td></td><td></td><td>9</td></tr>
+        <tr data-rank="10"><td></td><td></td><td>10</td></tr>
+      </tbody>
+    </table>
+    <h3>Total Number of Groups Applied: <span id="total-groups">0</span></h3>
+    <h3>Application Deadline: 15 October 2025</h3>
+    <h3>Last change time: <span id="last-change">N/A</span></h3>
+
+    <!-- Message area for submit / gap / empty -->
+    <p id="apply-message"></p>
+
+    <a href="#" id="submit-link" class="submit-btn">submit</a>
+    <a href="#" id="clear-link" class="clear-btn" onclick="handleClearClick()">clear</a>
+  </div>
+
+  <footer>
+    <img src="../image/footer_logo.png" alt="Footer Logo" width="460" height="100">
+    <p>&copy; CityU 2025 - sources of images and text from Wikipedia and Courtesy of Icon pack by Icons8 - designed by
+      <a href="design.html">Ammar Inamullah</a>
+    </p>
+  </footer>
+
+  <script src="https://personal.cs.cityu.edu.hk/~cs2204/2023/cw3cs2204.js"></script>
+  <script src="../javascript/apply.js"></script>
+
+
+</body>
+</html>
