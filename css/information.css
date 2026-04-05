@@ -1,0 +1,86 @@
+/* ===== INFORMATION PAGE ===== */
+
+/* -------- PROMO LAYOUT -------- */
+.promo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+
+  background: #f8fbff;
+  border-radius: 10px;
+  padding: 25px 35px;
+  margin: 25px auto;
+  max-width: 1100px;
+
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.promo-left {
+  flex: 1;
+}
+
+.promo-left h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #000;
+  line-height: 1.5;
+}
+
+.promo-right {
+  flex: 1;
+}
+
+.promo-right video {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* -------- TABLE -------- */
+table {
+  width: 80%;
+  margin: 40px auto;
+  border-collapse: collapse;
+  font-size: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 12px;
+  text-align: center;
+}
+
+thead {
+  background-color: #3a7bd5;
+  color: #fff;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #eef6ff;
+}
+
+tbody tr:hover {
+  background-color: #dce9ff;
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+}
+
+/* -------- RESPONSIVE -------- */
+@media (max-width: 768px) {
+  .promo {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .promo-right video {
+    width: 100%;
+  }
+
+  table {
+    width: 95%;
+  }
+}

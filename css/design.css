@@ -1,0 +1,41 @@
+/* Design Page Styling */
+
+body {
+  background: #f4f8ff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.design-content {
+  max-width: 900px;
+  margin: 32px auto;
+  padding: 24px 28px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  line-height: 1.5;
+}
+
+.design-content h2 {
+  color: #1a73e8;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #e1ecff;
+  padding-bottom: 4px;
+}
+
+.design-content h3 {
+  color: #174ea6;
+  margin-top: 18px;
+  margin-bottom: 6px;
+}
+
+.design-content ul {
+  margin-left: 18px;
+}
+
+.design-content code {
+  background: #f1f3f4;
+  padding: 1px 4px;
+  border-radius: 3px;
+  font-family: Consolas, monospace;
+  font-size: 0.95em;
+}
